@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>eMart - Track Order</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="track_order.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<link rel="icon" href="../images/logo.png">
+
+</head>
+
+<body>
+
+<div class="background-wrapper"></div>
+
+<!-- Header -->
+<header class="top-strip">
+<img src="../images/logo.png" class="favicon">
+
+<div class="brand-center">
+<h1 class="brand-name">eMart</h1>
+<p class="catchy-phrase">Fresh quality goods, delivered right to your door.</p>
+</div>
+
+<div class="header-right-spacer"></div>
+</header>
+
+<!-- Navbar -->
+<nav class="navbar">
+
+<div class="user-info">
+Welcome, <span id="userNameDisplay">Guest</span>!
+</div>
+
+<ul class="nav-links">
+<li><a href="dashboard.html">Home</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="orders.html">My Orders</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#" id="logoutBtn">Log out</a></li>
+</ul>
+
+</nav>
+
+<main class="track-page">
+
+<h2 class="track-heading">🚚 Your Order Is On The Way</h2>
+
+<div class="track-container">
+
+<div class="delivery-info">
+
+<p><strong>Driver:</strong> Michael Johnson</p>
+<p><strong>Vehicle:</strong> Delivery Van</p>
+<p><strong>Estimated Delivery:</strong> 25 minutes</p>
+<p><strong>Location:</strong> Manhattan, New York</p>
+
+</div>
+
+<div id="map"></div>
+
+</div>
+
+</main>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="dashboard.js"></script>
+<script src="track.js"></script>
+
+</body>
+</html>

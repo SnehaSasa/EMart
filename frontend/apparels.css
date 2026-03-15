@@ -1,0 +1,134 @@
+/* Apparels Specific CSS */
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Accordion Item */
+.accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Accordion Header */
+.accordion-header {
+    background: #f8f9fa;
+    padding: 20px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-dark);
+    transition: background 0.3s, color 0.3s;
+}
+
+.accordion-header:hover {
+    background: #e9ecef;
+}
+
+.accordion-icon {
+    font-size: 24px;
+    font-weight: 300;
+    transition: transform 0.3s;
+}
+
+.accordion-header.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(45deg); /* morphs + to x visually */
+}
+
+/* Accordion Content */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: #fff;
+}
+
+.accordion-content-inner {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Size Selector Styles */
+.size-selector {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.size-btn {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #ddd;
+    background: #f8f9fa;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    flex: 1;
+    max-width: 45px;
+}
+
+.size-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: white;
+}
+
+.size-btn.selected {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.size-btn:active {
+    transform: scale(0.95);
+}
+
+/* Adjust product card height flexibility */
+.product-card {
+    height: 100%;
+}
+
+.card-content {
+    padding-bottom: 20px;
+}
+
+.add-cart-btn:disabled {
+    background: #cccccc;
+    color: #666;
+    cursor: not-allowed;
+    border: none;
+    opacity: 0.9;
+}
+
+.add-cart-btn:disabled:hover {
+    background: #cccccc;
+    color: #666;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eMart - About Us</title>
+    <!-- Use Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="../images/logo.png">
+</head>
+<body>
+    <div class="background-wrapper"></div>
+    
+    <!-- Top Strip -->
+    <header class="top-strip">
+        <img src="../images/logo.png" alt="eMart Logo" class="favicon">
+        <div class="brand-center">
+            <h1 class="brand-name">eMart</h1>
+            <p class="catchy-phrase">Fresh quality goods, delivered right to your door.</p>
+        </div>
+        <div class="header-right-spacer"></div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="user-info">
+            Welcome, <span id="userNameDisplay">Guest</span>!
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="orders.html">My Orders</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#" id="logoutBtn">Log out</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main About Content -->
+    <main class="about-container">
+        
+        <!-- Welcome Introduction -->
+        <section class="about-intro block-glass">
+            <h2>Welcome to E-Mart</h2>
+            <p>
+                E-Mart is your ultimate online shopping destination offering a premium selection of fresh groceries, 
+                high-quality provisions, and trendy apparel. We are committed to providing you with a smooth, 
+                convenient, and delightful shopping experience right from the comfort of your home.
+            </p>
+        </section>
+
+        <!-- Three Core Pillars -->
+        <section class="about-pillars">
+            <div class="pillar-box block-glass">
+                <h3>Our Mission</h3>
+                <p>To provide fast, reliable, and affordable online shopping for everyone. We strive to make everyday essentials accessible with just a few clicks, ensuring absolute quality.</p>
+            </div>
+            <div class="pillar-box block-glass">
+                <h3>Our Vision</h3>
+                <p>To become a trusted global marketplace that redefines e-commerce, driven by community focus, sustainability, and technological innovation to serve millions seamlessly.</p>
+            </div>
+            <div class="pillar-box block-glass">
+                <h3>Why Choose Us</h3>
+                <ul>
+                    <li>Wide variety of premium products</li>
+                    <li>Fast and secure checkout</li>
+                    <li>Smart budget planning & deals</li>
+                    <li>Highly responsive customer support</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="about-testimonials block-glass">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                
+                <div class="testimonial-card">
+                    <p class="quote">"E-Mart completely changed how I buy groceries! The vegetables are incredibly fresh, and the delivery is always exactly on time."</p>
+                    <div class="customer-info">
+                        <strong>Sarah Jenkins</strong>
+                        <span>Austin, TX</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">"I love the apparel section. I ordered some shirts and jeans, and not only was the fit perfect, but the quality exceeded my expectations for the price!"</p>
+                    <div class="customer-info">
+                        <strong>Michael T.</strong>
+                        <span>Chicago, IL</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">"The site is so easy to use. I can smoothly toggle between my daily provisions and picking out a new dress. Secure checkout makes me feel safe. Highly recommend!"</p>
+                    <div class="customer-info">
+                        <strong>Emily R.</strong>
+                        <span>Seattle, WA</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Essential logic for standard nav functions -->
+    <script src="dashboard.js"></script>
+</body>
+</html>

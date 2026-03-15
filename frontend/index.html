@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eMart - Welcome</title>
+    <!-- Use Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../images/logo.png">
+</head>
+<body>
+    <div class="background-wrapper"></div>
+    
+    <!-- Top Strip -->
+    <header class="top-strip">
+        <img src="../images/logo.png" alt="eMart Logo" class="favicon">
+        <div class="brand-center">
+            <h1 class="brand-name">eMart</h1>
+            <p class="catchy-phrase">Fresh quality goods, delivered right to your door.</p>
+        </div>
+        <div class="header-right-spacer"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        
+        <!-- Forms Wrapper for animation -->
+        <div class="forms-wrapper" id="formsWrapper">
+            
+            <!-- Login Form -->
+            <div class="form-container" id="loginFormContainer">
+                <h2>Welcome Back</h2>
+                <p class="subtitle">Sign in to continue your shopping</p>
+                
+                <div class="error-msg" id="loginError"></div>
+                <div class="success-msg" id="loginSuccess"></div>
+
+                <form id="loginForm">
+                    <div class="input-group">
+                        <input type="email" id="loginEmail" required placeholder=" ">
+                        <label for="loginEmail">Email Address</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" required placeholder=" ">
+                        <label for="loginPassword">Password</label>
+                    </div>
+                    
+                    <button type="submit" class="btn primary-btn">
+                        <span>Log In</span>
+                        <div class="loader"></div>
+                    </button>
+                </form>
+
+                <div class="toggle-link">
+                    <p>If new user, <a href="#" id="toSignup">create an account</a></p>
+                </div>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-container hidden" id="signupFormContainer">
+                <h2>Join eMart</h2>
+                <p class="subtitle">Create an account to get started</p>
+                
+                <div class="error-msg" id="signupError"></div>
+                <div class="success-msg" id="signupSuccess"></div>
+
+                <form id="signupForm">
+                    <div class="input-group">
+                        <input type="text" id="signupName" required placeholder=" ">
+                        <label for="signupName">Full Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="signupEmail" required placeholder=" ">
+                        <label for="signupEmail">Email Address</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="signupPassword" required placeholder=" ">
+                        <label for="signupPassword">Password</label>
+                    </div>
+                    
+                    <button type="submit" class="btn primary-btn">
+                        <span>Create Account</span>
+                        <div class="loader"></div>
+                    </button>
+                </form>
+
+                <div class="toggle-link">
+                    <p>Already an existing user? <a href="#" id="toLogin">Log in</a></p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

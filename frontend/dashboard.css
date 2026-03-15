@@ -1,0 +1,206 @@
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.user-info {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--primary-dark);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: var(--primary-color);
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-links li a:hover::after, .nav-links li a.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#logoutBtn {
+    color: var(--danger-color);
+}
+
+#logoutBtn::after {
+    background-color: var(--danger-color);
+}
+
+/* Dashboard Main Layout */
+.dashboard-main {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Category Box Styles */
+.category-box {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 250px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.4);
+    backdrop-filter: blur(8px);
+}
+
+.category-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.category-imgbox {
+    flex: 1;
+    max-width: 45%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Images defined explicitly */
+.groceries-img {
+    background-image: url('../images/grocery.jpeg');
+}
+
+.provisions-img {
+    background-image: url('../images/provisions.webp');
+}
+
+.apparels-img {
+    background-image: url('../images/apparel.png'); /* Found the apparel image inside images */
+    background-position: top;
+}
+
+.category-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category-content h2 {
+    font-size: 32px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.category-content p {
+    font-size: 18px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.text-right {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.text-left {
+    text-align: left;
+    align-items: flex-start;
+}
+
+/* Add a pseudo-element overlay gradient to the images for blending */
+.category-imgbox::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.category-box:not(.reverse-layout) .category-imgbox::after {
+    background: linear-gradient(to right, transparent 80%, rgba(255,255,255,0.9) 100%);
+}
+
+.category-box.reverse-layout .category-imgbox::after {
+    background: linear-gradient(to left, transparent 80%, rgba(255,255,255,0.9) 100%);
+}
+
+/* Responsive adjust */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .category-box, .category-box.reverse-layout {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .category-imgbox {
+        max-width: 100%;
+        height: 200px;
+    }
+    
+    .category-content {
+        text-align: center !important;
+        align-items: center !important;
+        padding: 25px;
+    }
+    
+    .category-box:not(.reverse-layout) .category-imgbox::after,
+    .category-box.reverse-layout .category-imgbox::after {
+        background: linear-gradient(to bottom, transparent 80%, rgba(255,255,255,0.9) 100%);
+    }
+}

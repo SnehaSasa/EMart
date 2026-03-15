@@ -1,0 +1,145 @@
+/* Global Container */
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Semi-transparent Glass Container used across sections */
+.block-glass {
+    background: rgba(255, 255, 255, 0.85); /* Light, letting background image peek through */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Intro Section */
+.about-intro h2 {
+    color: var(--primary-dark);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 3 Pillars Section */
+.about-pillars {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.pillar-box {
+    flex: 1;
+    margin-bottom: 0; /* Override generic margin inside flex */
+    text-align: left;
+}
+
+.pillar-box h3 {
+    font-size: 24px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.pillar-box p {
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.pillar-box ul {
+    list-style-type: none; /* Provide custom bullet alignment */
+    padding-left: 0;
+}
+
+.pillar-box ul li {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px; /* Space for custom bullet */
+}
+
+/* Custom bullet for Why Choose Us list */
+.pillar-box ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+
+/* Testimonials Section */
+.about-testimonials h2 {
+    color: var(--primary-dark);
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: #ffffff;    /* Solid white over the glass panel for contrast */
+    border-radius: 8px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--primary-color); /* Orange brand alignment */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.quote {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-info strong {
+    font-size: 18px;
+    color: var(--primary-dark);
+}
+
+.customer-info span {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Responsive Stacking */
+@media (max-width: 900px) {
+    .about-pillars {
+        flex-direction: column;
+    }
+}

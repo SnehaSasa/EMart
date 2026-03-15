@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>eMart - My Orders</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="orders.css">
+
+<link rel="icon" href="../images/logo.png">
+
+</head>
+
+<body>
+
+<div class="background-wrapper"></div>
+
+<header class="top-strip">
+<img src="../images/logo.png" class="favicon">
+
+<div class="brand-center">
+<h1 class="brand-name">eMart</h1>
+<p class="catchy-phrase">Fresh quality goods, delivered right to your door.</p>
+</div>
+
+<div class="header-right-spacer"></div>
+</header>
+
+<nav class="navbar">
+
+<div class="user-info">
+Welcome, <span id="userNameDisplay">Guest</span>!
+</div>
+
+<ul class="nav-links">
+<li><a href="dashboard.html">Home</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="orders.html" class="active">My Orders</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#" id="logoutBtn">Log out</a></li>
+</ul>
+
+</nav>
+
+<main class="orders-page">
+
+<h2 class="orders-heading">📦 My Orders</h2>
+
+<div id="ordersContainer"></div>
+
+</main>
+
+<script src="dashboard.js"></script>
+<script src="orders.js"></script>
+
+</body>
+</html>

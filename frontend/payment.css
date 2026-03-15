@@ -1,0 +1,88 @@
+/* Payment Page */
+
+.payment-page{
+max-width:900px;
+margin:30px auto;
+padding:0 20px;
+}
+
+.payment-heading{
+color:#fff;
+font-size:30px;
+margin-bottom:25px;
+text-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Payment Container */
+
+.payment-container{
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(10px);
+border-radius:12px;
+padding:40px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border:1px solid rgba(255,255,255,0.5);
+}
+
+/* Payment Method */
+
+.payment-method{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.payment-method label{
+font-size:16px;
+font-weight:600;
+color:var(--text-color);
+}
+
+/* Dropdown */
+
+.payment-method select{
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:15px;
+background:#fff;
+}
+
+/* Form Fields */
+
+#paymentForm{
+display:flex;
+flex-direction:column;
+gap:12px;
+margin-top:10px;
+}
+
+#paymentForm input{
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:14px;
+}
+
+/* Pay Button */
+
+.pay-btn{
+margin-top:15px;
+width:100%;
+padding:15px;
+font-size:18px;
+}
+
+/* Responsive */
+
+@media(max-width:700px){
+
+.payment-container{
+padding:25px;
+}
+
+.payment-heading{
+font-size:24px;
+}
+
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>eMart - Order Confirmed</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="order_success.css">
+
+<link rel="icon" href="../images/logo.png">
+
+</head>
+
+<body>
+
+<div class="background-wrapper"></div>
+
+<!-- Header -->
+<header class="top-strip">
+<img src="../images/logo.png" class="favicon">
+
+<div class="brand-center">
+<h1 class="brand-name">eMart</h1>
+<p class="catchy-phrase">Fresh quality goods, delivered right to your door.</p>
+</div>
+
+<div class="header-right-spacer"></div>
+</header>
+
+<!-- Navbar -->
+<nav class="navbar">
+
+<div class="user-info">
+Welcome, <span id="userNameDisplay">Guest</span>!
+</div>
+
+<ul class="nav-links">
+<li><a href="dashboard.html">Home</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="orders.html">My Orders</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#" id="logoutBtn">Log out</a></li>
+</ul>
+
+</nav>
+
+<main class="success-page">
+
+<div class="success-container">
+
+<div class="success-icon">✅</div>
+
+<h2>Order Confirmed!</h2>
+
+<p>Your payment was successful and your order has been placed.</p>
+
+<p class="delivery-msg">
+Our delivery partner is preparing your order.
+</p>
+
+<button class="btn primary-btn track-btn"
+onclick="window.location.href='track_order.html'">
+Track Your Order
+</button>
+
+<a href="dashboard.html" class="continue-link">
+← Continue Shopping
+</a>
+
+</div>
+
+</main>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

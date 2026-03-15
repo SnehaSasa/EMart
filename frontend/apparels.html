@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eMart - Apparels</title>
+    <!-- Use Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="groceries.css"> <!-- Reusing sidebar/shop-layout base -->
+    <link rel="stylesheet" href="apparels.css"> <!-- Specific accordion and size styles -->
+    <link rel="icon" href="../images/logo.png">
+</head>
+<body>
+    <div class="background-wrapper"></div>
+    
+    <!-- Top Strip -->
+    <header class="top-strip">
+        <img src="../images/logo.png" alt="eMart Logo" class="favicon">
+        <div class="brand-center">
+            <h1 class="brand-name">eMart</h1>
+            <p class="catchy-phrase">Fresh quality goods, delivered right to your door.</p>
+        </div>
+        <div class="header-right-spacer"></div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="user-info">
+            Welcome, <span id="userNameDisplay">Guest</span>!
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="orders.html">My Orders</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#" id="logoutBtn">Log out</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Layout with Sidebar -->
+    <div class="shop-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Categories</h3>
+            <ul class="sidebar-menu">
+                <li><a href="#" id="btnMens" class="sidebar-link active">Men's Clothing</a></li>
+                <li><a href="#" id="btnWomens" class="sidebar-link">Women's Clothing</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product Accordions Area -->
+        <main class="products-area" style="padding: 30px;">
+            <h2 class="section-heading" id="sectionHeading">Men's Clothing</h2>
+            <div class="accordion-container" id="accordionContainer">
+                <!-- Accordions injected dynamically via JS -->
+            </div>
+        </main>
+        
+    </div>
+
+    <!-- Re-use dashboard JS for auth, and custom apparels JS for rendering accordions -->
+    <script src="dashboard.js"></script>
+    <script src="cartUtils.js"></script>
+    <script src="apparels.js"></script>
+</body>
+</html>

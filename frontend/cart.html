@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eMart - Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="icon" href="../images/logo.png">
+</head>
+<body>
+    <div class="background-wrapper"></div>
+
+    <!-- Top Strip -->
+    <header class="top-strip">
+        <img src="../images/logo.png" alt="eMart Logo" class="favicon">
+        <div class="brand-center">
+            <h1 class="brand-name">eMart</h1>
+            <p class="catchy-phrase">Fresh quality goods, delivered right to your door.</p>
+        </div>
+        <div class="header-right-spacer"></div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="user-info">
+            Welcome, <span id="userNameDisplay">Guest</span>!
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="cart.html" class="active">Cart</a></li>
+            <li><a href="orders.html">My Orders</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#" id="logoutBtn">Log out</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cart Container -->
+    <main class="cart-page">
+
+        <h2 class="cart-heading">🛒 Your Shopping Cart</h2>
+
+        <!-- Loading State -->
+        <div class="cart-loading" id="cartLoading">
+            <div class="spinner"></div>
+            <p>Loading your cart...</p>
+        </div>
+
+        <!-- Empty Cart State -->
+        <div class="cart-empty" id="cartEmpty" style="display:none;">
+            <div class="empty-icon">🛒</div>
+            <h3>Your Cart is Empty</h3>
+            <p>Looks like you haven't added any products yet. Browse our categories and fill up your cart!</p>
+            <a href="dashboard.html" class="btn primary-btn continue-btn">Continue Shopping</a>
+        </div>
+
+        <!-- Cart Content (items + summary) -->
+        <div class="cart-content" id="cartContent" style="display:none;">
+            
+            <!-- Cart Items List -->
+            <div class="cart-items" id="cartItems">
+                <!-- Dynamically injected -->
+            </div>
+
+            <!-- Cart Summary Sidebar -->
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Items</span>
+                    <span id="summaryItemCount">0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="summarySubtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span class="free-ship">FREE</span>
+                </div>
+                <hr class="summary-divider">
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span id="summaryTotal">$0.00</span>
+                </div>
+                <button class="btn primary-btn proceedpayment-btn" id="proceedPaymentBtn">
+                    Proceed to Payment
+                </button>
+                <a href="dashboard.html" class="continue-link">← Continue Shopping</a>
+            </div>
+        </div>
+
+        <!-- Checkout Success Overlay -->
+        <!-- <div class="checkout-overlay" id="checkoutOverlay" style="display:none;">
+            <div class="checkout-modal">
+                <div class="check-icon">✅</div>
+                <h3>Order Placed Successfully!</h3>
+                <p>Thank you for shopping with eMart. Your order has been confirmed.</p>
+                <p class="order-total" id="orderTotal"></p>
+                <a href="dashboard.html" class="btn primary-btn">Back to Home</a>
+            </div>
+        </div> -->
+
+    </main>
+
+    <script src="dashboard.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

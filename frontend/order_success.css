@@ -1,0 +1,91 @@
+/* Order Success Page */
+
+.success-page{
+max-width:900px;
+margin:40px auto;
+padding:0 20px;
+display:flex;
+justify-content:center;
+}
+
+/* Main Card */
+
+.success-container{
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(10px);
+border-radius:12px;
+padding:50px 40px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border:1px solid rgba(255,255,255,0.5);
+max-width:500px;
+width:100%;
+}
+
+/* Success Icon */
+
+.success-icon{
+font-size:70px;
+margin-bottom:15px;
+}
+
+/* Heading */
+
+.success-container h2{
+font-size:28px;
+color:var(--primary-dark);
+margin-bottom:10px;
+}
+
+/* Text */
+
+.success-container p{
+font-size:16px;
+color:var(--text-light);
+margin-bottom:10px;
+}
+
+.delivery-msg{
+margin-bottom:25px;
+}
+
+/* Track Button */
+
+.track-btn{
+margin-top:10px;
+padding:14px 35px;
+font-size:17px;
+}
+
+/* Continue Shopping */
+
+.continue-link{
+display:block;
+margin-top:20px;
+color:var(--primary-color);
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+}
+
+.continue-link:hover{
+color:var(--primary-dark);
+}
+
+/* Responsive */
+
+@media(max-width:700px){
+
+.success-container{
+padding:35px 25px;
+}
+
+.success-container h2{
+font-size:24px;
+}
+
+.success-icon{
+font-size:60px;
+}
+
+}

@@ -1,0 +1,52 @@
+.orders-page{
+max-width:1100px;
+margin:30px auto;
+padding:0 20px;
+}
+
+.orders-heading{
+color:#fff;
+font-size:30px;
+margin-bottom:25px;
+text-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+
+.order-card{
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(10px);
+border-radius:12px;
+padding:25px;
+margin-bottom:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border:1px solid rgba(255,255,255,0.5);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.order-info{
+display:flex;
+flex-direction:column;
+gap:5px;
+}
+
+.order-id{
+font-weight:600;
+font-size:18px;
+color:var(--text-color);
+}
+
+.order-date{
+font-size:14px;
+color:var(--text-light);
+}
+
+.order-price{
+font-size:16px;
+font-weight:600;
+color:var(--primary-dark);
+}
+
+.track-btn{
+padding:10px 20px;
+}

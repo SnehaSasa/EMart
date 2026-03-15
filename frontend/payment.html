@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>eMart - Payment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="payment.css">
+
+<link rel="icon" href="../images/logo.png">
+</head>
+
+<body>
+
+<div class="background-wrapper"></div>
+
+<header class="top-strip">
+<img src="../images/logo.png" class="favicon">
+<div class="brand-center">
+<h1 class="brand-name">eMart</h1>
+<p class="catchy-phrase">Fresh quality goods, delivered right to your door.</p>
+</div>
+<div class="header-right-spacer"></div>
+</header>
+
+<nav class="navbar">
+<div class="user-info">
+Welcome, <span id="userNameDisplay">Guest</span>!
+</div>
+
+<ul class="nav-links">
+<li><a href="dashboard.html">Home</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="orders.html">My Orders</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#" id="logoutBtn">Log out</a></li>
+</ul>
+</nav>
+
+<main class="payment-page">
+
+<h2 class="payment-heading">💳 Complete Your Payment</h2>
+
+<div class="payment-container">
+
+<div class="payment-method">
+
+<label>Payment Method</label>
+
+<select id="paymentMethod">
+<option value="card">Credit / Debit Card</option>
+<option value="netbanking">Net Banking</option>
+<option value="upi">UPI</option>
+</select>
+
+<div id="paymentForm"></div>
+
+<button class="btn primary-btn pay-btn" id="payNowBtn">
+Pay Now
+</button>
+
+</div>
+
+</div>
+
+</main>
+
+<script src="dashboard.js"></script>
+<script src="payment.js"></script>
+
+</body>
+</html>

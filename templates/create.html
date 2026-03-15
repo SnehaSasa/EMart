@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Account</title>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-image: url('../static/landing-page/images/bg3.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .register {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      width: 400px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      text-align: left;
+      position: relative;
+    }
+
+    .input-group label {
+      width: 100px;
+      font-weight: bold;
+      text-align: left;
+      margin: 20px;
+      color: black;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      transition: all 0.3s ease-in-out;
+      background: rgba(255, 255, 255, 0.8);
+      color: #333;
+    }
+
+    .input-group input:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 5px rgba(40, 167, 69, 0.4);
+    }
+
+    .register button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+      margin-top: 10px;
+    }
+
+    .register button:hover {
+      background: linear-gradient(135deg, #0056b3, #004494);
+      transform: scale(1.05);
+    }
+
+    .extra-links {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .extra-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+      margin: 0 5px;
+    }
+
+    .extra-links a:hover {
+      color: #ffcc00;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+      text-align: left;
+      width: 100%;
+      padding-left: 120px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="register">
+    <h2 style="margin-top: 5px; color: black;">Create an Account</h2><br>
+    <form id="registerForm" action="/create" method="post">
+      <div class="input-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="error-message" id="nameError"></div>
+
+      <div class="input-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="error-message" id="emailError"></div>
+
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+      </div>
+      <div class="error-message" id="passwordError"></div>
+
+      <div class="input-group">
+        <label for="confirmpassword">Confirm:</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required>
+      </div>
+      <div class="error-message" id="confirmPasswordError"></div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div class="extra-links">
+      <p>Already have an account? <a href="/register">Login</a></p>
+    </div>
+  </div>
+
+  <!-- <script>
+
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+    // Clear previous errors
+    document.getElementById("nameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("passwordError").innerText = "";
+    document.getElementById("confirmPasswordError").innerText = "";
+
+    let isValid = true;
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const confirmPassword = document.getElementById("confirmpassword").value.trim();
+
+    if (name === "") {
+      document.getElementById("nameError").innerText = "Name is required.";
+      isValid = false;
+    }
+
+    if (email === "") {
+      document.getElementById("emailError").innerText = "Email is required.";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      document.getElementById("emailError").innerText = "Please enter a valid email.";
+      isValid = false;
+    }
+
+    if (password === "") {
+      document.getElementById("passwordError").innerText = "Password is required.";
+      isValid = false;
+    } else if (password.length < 6) {
+      document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
+      isValid = false;
+    }
+
+    if (confirmPassword === "") {
+      document.getElementById("confirmPasswordError").innerText = "Confirm your password.";
+      isValid = false;
+    } else if (password !== confirmPassword) {
+      document.getElementById("confirmPasswordError").innerText = "Passwords do not match.";
+      isValid = false;
+    }
+
+    if (!isValid) {
+      event.preventDefault(); 
+    } else {
+      alert("Registered successfully!");
+    }
+  });
+</script> -->
+
+</body>
+</html>
+
+      

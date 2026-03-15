@@ -1,0 +1,118 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-image: url('../images/bg3.jpeg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: rgba(255, 255, 255,0.322); 
+
+     
+}
+.header .logo{
+    display: block;
+    border:2px solid black;
+    padding: 30px;
+    text-align: center;
+    background-color:rgb(243, 133, 55);
+}
+.header .navbar{
+    border: 2px solid black;;
+    background-color: rgb(214, 161, 81);
+    font-size: large;
+    padding: 20px;
+
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin-right: 20px;
+}
+
+.navlinks {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navlinks li {
+    margin-left: 20px;
+}
+
+.navlinks li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.logo img{
+    height: 80px;
+    position: absolute;
+    left: 20px; 
+    top: 25px;   
+}  
+
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 290px;
+    background-color: rgb(214, 161, 81);
+    padding: 5px;
+    border-right: 2px solid black;
+    position: fixed;
+    height: 100vh;
+
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.sidebar h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgb(243, 133, 55);
+    color: white;
+    padding-left: 10px;
+}
+
+.main-content {
+    margin-left: 270px; 
+    padding: 20px;
+
+}
